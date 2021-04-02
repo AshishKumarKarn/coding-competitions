@@ -9,7 +9,7 @@ import java.util.InputMismatchException;
 
 /**
  * This is template class for submission in CodeJam Competition.
- * Rename the class to Solution and start coding logic form line 28.
+ * Rename the class to Solution and start coding logic form line 24.
  * ni() -> nextInput
  * na() -> nextArray -> int array
  *
@@ -20,15 +20,8 @@ public class Solution {
     static PrintWriter out;
     static String INPUT = "";
 
-    static void solve() {
-        for (int T = ni(), cas = 1; T > 0; T--, cas++) {
-            out.print("Case #" + cas + ": ");
-            go();
-        }
-    }
-
     //Solution Implementation
-    static void go() {
+    private static void go() {
 //        int n = ni();
 //        int[] a = na(n);
 //        int ans = 0;
@@ -37,6 +30,14 @@ public class Solution {
 //
 //        out.println(ans);
     }
+
+    private static void solve() {
+        for (int T = ni(), cas = 1; T > 0; T--, cas++) {
+            out.print("Case #" + cas + ": ");
+            go();
+        }
+    }
+
 
     public static void main(String[] args) throws Exception {
         long S = System.currentTimeMillis();
@@ -92,21 +93,30 @@ public class Solution {
         return !(c >= 33 && c <= 126);
     }
 
-    //	private static boolean isSpaceChar(int c) { return !(c >= 32 && c <= 126); }
     private static int skip() {
         int b;
         while ((b = readByte()) != -1 && isSpaceChar(b)) ;
         return b;
     }
 
+    /**
+     * @return nextDouble in input
+     */
     private static double nd() {
         return Double.parseDouble(ns());
     }
 
+    /**
+     * @return nextCharacter in input
+     */
     private static char nc() {
         return (char) skip();
     }
 
+
+    /**
+     * @return nextString in input
+     */
     private static String ns() {
         int b = skip();
         StringBuilder sb = new StringBuilder();
@@ -117,6 +127,9 @@ public class Solution {
         return sb.toString();
     }
 
+    /**
+     * @return nextString in input as character[] of length n
+     */
     private static char[] ns(int n) {
         char[] buf = new char[n];
         int b = skip(), p = 0;
@@ -133,12 +146,18 @@ public class Solution {
         return map;
     }
 
+    /**
+     * @return nextArray in input
+     */
     private static int[] na(int n) {
         int[] a = new int[n];
         for (int i = 0; i < n; i++) a[i] = ni();
         return a;
     }
 
+    /**
+     * @return nextInteger in input
+     */
     private static int ni() {
         int num = 0, b;
         boolean minus = false;
@@ -158,6 +177,9 @@ public class Solution {
         }
     }
 
+    /**
+     * @return nextLong in input
+     */
     private static long nl() {
         long num = 0;
         int b;
