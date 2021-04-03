@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 
 /**
- * This is template class for submission in CodeJam Competition.
+ * This is template class for submission in CodeJam/Hashcode/Kickstart Competition.
  * Rename the class to Solution and start coding logic form line 24.
  * ni() -> nextInput
  * na() -> nextArray -> int array

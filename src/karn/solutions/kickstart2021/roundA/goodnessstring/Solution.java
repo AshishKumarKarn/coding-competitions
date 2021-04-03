@@ -31,7 +31,7 @@ public class Solution {
                 count++;
             }
         }
-        out.println(Math.abs(count-gs));
+        out.println(Math.abs(count - gs));
     }
 
     private static void solve() {
